@@ -11,4 +11,4 @@
   
 - **Skills**
   * Implemented a third-party library, YouTube API
-  * Learned and implemented callback 
+  * Gained more experience with the implementation of callbacks and event handling 
