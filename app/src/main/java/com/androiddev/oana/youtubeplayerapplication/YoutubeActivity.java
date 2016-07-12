@@ -13,7 +13,7 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-//change extends to tell it to use the YoutubeLibrary that we added
+//extends it to use the YoutubeLibrary that we added
 public class YoutubeActivity extends YouTubeBaseActivity
     implements YouTubePlayer.OnInitializedListener
     {
@@ -41,8 +41,7 @@ public class YoutubeActivity extends YouTubeBaseActivity
 //            }
 //        });
     }
-        //methods generated due to the extends YouTubeBaseActivity
-        //added Toast to display a message
+       
         //set up listeners and queues up the video so that YouTube Player knows where to go and get the results
         @Override
         public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
@@ -50,13 +49,11 @@ public class YoutubeActivity extends YouTubeBaseActivity
             youTubePlayer.setPlayerStateChangeListener(playerStateChangedListener);
             youTubePlayer.setPlaybackEventListener(playbackEventListener);
 
-            //if it was not restored play video
             if(!wasRestored){
                 youTubePlayer.cueVideo(YOUTUBE_VIDEO_ID);
             }
         }
 
-        //implement the Listeners
          YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
             @Override
             public void onPlaying() {
